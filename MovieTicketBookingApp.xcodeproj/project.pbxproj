@@ -16,6 +16,13 @@
 		C09CD2222A84A1AA00C58757 /* MovieTicketBookingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD2212A84A1AA00C58757 /* MovieTicketBookingAppTests.swift */; };
 		C09CD22C2A84A1AA00C58757 /* MovieTicketBookingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD22B2A84A1AA00C58757 /* MovieTicketBookingAppUITests.swift */; };
 		C09CD22E2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD22D2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift */; };
+		D3BEA1262A859754008EE563 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEA1252A859754008EE563 /* HomeScreenViewController.swift */; };
+		D3BEA12B2A8598E3008EE563 /* HomeScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BEA12A2A8598E3008EE563 /* HomeScreenStoryboard.storyboard */; };
+		D3BEA1342A85CC41008EE563 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEA1332A85CC41008EE563 /* MovieModel.swift */; };
+		D3BEA15B2A882C42008EE563 /* MovieCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEA1592A882C42008EE563 /* MovieCategoryCollectionViewCell.swift */; };
+		D3BEA15C2A882C42008EE563 /* MovieCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BEA15A2A882C42008EE563 /* MovieCategoryCollectionViewCell.xib */; };
+		D3BEA15F2A89CBFE008EE563 /* MovieCSCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEA15D2A89CBFE008EE563 /* MovieCSCollectionViewCell.swift */; };
+		D3BEA1602A89CBFE008EE563 /* MovieCSCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BEA15E2A89CBFE008EE563 /* MovieCSCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +56,13 @@
 		C09CD2272A84A1AA00C58757 /* MovieTicketBookingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTicketBookingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09CD22B2A84A1AA00C58757 /* MovieTicketBookingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTicketBookingAppUITests.swift; sourceTree = "<group>"; };
 		C09CD22D2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTicketBookingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D3BEA1252A859754008EE563 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
+		D3BEA12A2A8598E3008EE563 /* HomeScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreenStoryboard.storyboard; sourceTree = "<group>"; };
+		D3BEA1332A85CC41008EE563 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		D3BEA1592A882C42008EE563 /* MovieCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		D3BEA15A2A882C42008EE563 /* MovieCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
+		D3BEA15D2A89CBFE008EE563 /* MovieCSCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCSCollectionViewCell.swift; sourceTree = "<group>"; };
+		D3BEA15E2A89CBFE008EE563 /* MovieCSCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCSCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,10 @@
 		C09CD2092A84A1A900C58757 /* MovieTicketBookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				D3BEA13D2A85D90A008EE563 /* ViewCells */,
+				D3BEA1322A85CC2E008EE563 /* Model */,
+				D3BEA1292A859836008EE563 /* Views */,
+				D3BEA1212A85970B008EE563 /* ViewController */,
 				C09CD20A2A84A1A900C58757 /* AppDelegate.swift */,
 				C09CD20C2A84A1A900C58757 /* SceneDelegate.swift */,
 				C09CD20E2A84A1A900C58757 /* ViewController.swift */,
@@ -125,6 +143,49 @@
 				C09CD22D2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift */,
 			);
 			path = MovieTicketBookingAppUITests;
+			sourceTree = "<group>";
+		};
+		D3BEA1212A85970B008EE563 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEA1252A859754008EE563 /* HomeScreenViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		D3BEA1292A859836008EE563 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEA12A2A8598E3008EE563 /* HomeScreenStoryboard.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3BEA1322A85CC2E008EE563 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEA1332A85CC41008EE563 /* MovieModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D3BEA13D2A85D90A008EE563 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEA1542A85E514008EE563 /* CollectionViewCells */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		D3BEA1542A85E514008EE563 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEA1592A882C42008EE563 /* MovieCategoryCollectionViewCell.swift */,
+				D3BEA15A2A882C42008EE563 /* MovieCategoryCollectionViewCell.xib */,
+				D3BEA15D2A89CBFE008EE563 /* MovieCSCollectionViewCell.swift */,
+				D3BEA15E2A89CBFE008EE563 /* MovieCSCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +292,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3BEA12B2A8598E3008EE563 /* HomeScreenStoryboard.storyboard in Resources */,
 				C09CD2172A84A1A900C58757 /* LaunchScreen.storyboard in Resources */,
 				C09CD2142A84A1A900C58757 /* Assets.xcassets in Resources */,
+				D3BEA15C2A882C42008EE563 /* MovieCategoryCollectionViewCell.xib in Resources */,
 				C09CD2122A84A1A900C58757 /* Main.storyboard in Resources */,
+				D3BEA1602A89CBFE008EE563 /* MovieCSCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,8 +322,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3BEA15B2A882C42008EE563 /* MovieCategoryCollectionViewCell.swift in Sources */,
+				D3BEA1342A85CC41008EE563 /* MovieModel.swift in Sources */,
 				C09CD20F2A84A1A900C58757 /* ViewController.swift in Sources */,
+				D3BEA1262A859754008EE563 /* HomeScreenViewController.swift in Sources */,
 				C09CD20B2A84A1A900C58757 /* AppDelegate.swift in Sources */,
+				D3BEA15F2A89CBFE008EE563 /* MovieCSCollectionViewCell.swift in Sources */,
 				C09CD20D2A84A1A900C58757 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,7 +509,9 @@
 				INFOPLIST_FILE = MovieTicketBookingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = HomeScreenStoryboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +538,9 @@
 				INFOPLIST_FILE = MovieTicketBookingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = HomeScreenStoryboard;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
