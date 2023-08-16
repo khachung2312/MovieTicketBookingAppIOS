@@ -16,6 +16,17 @@
 		C09CD2222A84A1AA00C58757 /* MovieTicketBookingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD2212A84A1AA00C58757 /* MovieTicketBookingAppTests.swift */; };
 		C09CD22C2A84A1AA00C58757 /* MovieTicketBookingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD22B2A84A1AA00C58757 /* MovieTicketBookingAppUITests.swift */; };
 		C09CD22E2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD22D2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift */; };
+		C0AD4FDC2A8A721600904E98 /* BookTicketsStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0AD4FDB2A8A721600904E98 /* BookTicketsStoryBoard.storyboard */; };
+		C0AD4FDE2A8A72A300904E98 /* MovieSessionSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD4FDD2A8A72A300904E98 /* MovieSessionSelectionViewController.swift */; };
+		C0AD4FE02A8A72EE00904E98 /* SeatSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD4FDF2A8A72EE00904E98 /* SeatSelectionViewController.swift */; };
+		C0AD4FE32A8A741E00904E98 /* CenemaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AD4FE12A8A741E00904E98 /* CenemaTableViewCell.swift */; };
+		C0AD4FE42A8A741E00904E98 /* CenemaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AD4FE22A8A741E00904E98 /* CenemaTableViewCell.xib */; };
+		C0E5BB312A8CA0DE00B1C41A /* SeatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E5BB2F2A8CA0DE00B1C41A /* SeatCollectionViewCell.swift */; };
+		C0E5BB322A8CA0DE00B1C41A /* SeatCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0E5BB302A8CA0DE00B1C41A /* SeatCollectionViewCell.xib */; };
+		C0FD7C622A8BC00000075B24 /* MovieShowtimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD7C602A8BC00000075B24 /* MovieShowtimeCollectionViewCell.swift */; };
+		C0FD7C632A8BC00000075B24 /* MovieShowtimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FD7C612A8BC00000075B24 /* MovieShowtimeCollectionViewCell.xib */; };
+		C0FD7C662A8BC9EE00075B24 /* MovieDatetimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0FD7C642A8BC9EE00075B24 /* MovieDatetimeCollectionViewCell.swift */; };
+		C0FD7C672A8BC9EE00075B24 /* MovieDatetimeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0FD7C652A8BC9EE00075B24 /* MovieDatetimeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,17 @@
 		C09CD2272A84A1AA00C58757 /* MovieTicketBookingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTicketBookingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09CD22B2A84A1AA00C58757 /* MovieTicketBookingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTicketBookingAppUITests.swift; sourceTree = "<group>"; };
 		C09CD22D2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTicketBookingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C0AD4FDB2A8A721600904E98 /* BookTicketsStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookTicketsStoryBoard.storyboard; sourceTree = "<group>"; };
+		C0AD4FDD2A8A72A300904E98 /* MovieSessionSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSessionSelectionViewController.swift; sourceTree = "<group>"; };
+		C0AD4FDF2A8A72EE00904E98 /* SeatSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectionViewController.swift; sourceTree = "<group>"; };
+		C0AD4FE12A8A741E00904E98 /* CenemaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenemaTableViewCell.swift; sourceTree = "<group>"; };
+		C0AD4FE22A8A741E00904E98 /* CenemaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CenemaTableViewCell.xib; sourceTree = "<group>"; };
+		C0E5BB2F2A8CA0DE00B1C41A /* SeatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatCollectionViewCell.swift; sourceTree = "<group>"; };
+		C0E5BB302A8CA0DE00B1C41A /* SeatCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeatCollectionViewCell.xib; sourceTree = "<group>"; };
+		C0FD7C602A8BC00000075B24 /* MovieShowtimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieShowtimeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C0FD7C612A8BC00000075B24 /* MovieShowtimeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieShowtimeCollectionViewCell.xib; sourceTree = "<group>"; };
+		C0FD7C642A8BC9EE00075B24 /* MovieDatetimeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDatetimeCollectionViewCell.swift; sourceTree = "<group>"; };
+		C0FD7C652A8BC9EE00075B24 /* MovieDatetimeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDatetimeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +121,10 @@
 		C09CD2092A84A1A900C58757 /* MovieTicketBookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				C0AD4FDA2A8A71D000904E98 /* Handler */,
+				C0AD4FD52A8A713A00904E98 /* Views */,
+				C0AD4FD42A8A711A00904E98 /* Controllers */,
+				C0AD4FD32A8A70F500904E98 /* StoryBoards */,
 				C09CD20A2A84A1A900C58757 /* AppDelegate.swift */,
 				C09CD20C2A84A1A900C58757 /* SceneDelegate.swift */,
 				C09CD20E2A84A1A900C58757 /* ViewController.swift */,
@@ -125,6 +151,45 @@
 				C09CD22D2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift */,
 			);
 			path = MovieTicketBookingAppUITests;
+			sourceTree = "<group>";
+		};
+		C0AD4FD32A8A70F500904E98 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				C0AD4FDB2A8A721600904E98 /* BookTicketsStoryBoard.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		C0AD4FD42A8A711A00904E98 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C0AD4FDD2A8A72A300904E98 /* MovieSessionSelectionViewController.swift */,
+				C0AD4FDF2A8A72EE00904E98 /* SeatSelectionViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C0AD4FD52A8A713A00904E98 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C0AD4FE12A8A741E00904E98 /* CenemaTableViewCell.swift */,
+				C0AD4FE22A8A741E00904E98 /* CenemaTableViewCell.xib */,
+				C0FD7C602A8BC00000075B24 /* MovieShowtimeCollectionViewCell.swift */,
+				C0FD7C612A8BC00000075B24 /* MovieShowtimeCollectionViewCell.xib */,
+				C0FD7C642A8BC9EE00075B24 /* MovieDatetimeCollectionViewCell.swift */,
+				C0FD7C652A8BC9EE00075B24 /* MovieDatetimeCollectionViewCell.xib */,
+				C0E5BB2F2A8CA0DE00B1C41A /* SeatCollectionViewCell.swift */,
+				C0E5BB302A8CA0DE00B1C41A /* SeatCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C0AD4FDA2A8A71D000904E98 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Handler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +296,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FD7C672A8BC9EE00075B24 /* MovieDatetimeCollectionViewCell.xib in Resources */,
+				C0AD4FDC2A8A721600904E98 /* BookTicketsStoryBoard.storyboard in Resources */,
 				C09CD2172A84A1A900C58757 /* LaunchScreen.storyboard in Resources */,
+				C0AD4FE42A8A741E00904E98 /* CenemaTableViewCell.xib in Resources */,
+				C0FD7C632A8BC00000075B24 /* MovieShowtimeCollectionViewCell.xib in Resources */,
 				C09CD2142A84A1A900C58757 /* Assets.xcassets in Resources */,
 				C09CD2122A84A1A900C58757 /* Main.storyboard in Resources */,
+				C0E5BB322A8CA0DE00B1C41A /* SeatCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +328,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0FD7C622A8BC00000075B24 /* MovieShowtimeCollectionViewCell.swift in Sources */,
 				C09CD20F2A84A1A900C58757 /* ViewController.swift in Sources */,
+				C0AD4FDE2A8A72A300904E98 /* MovieSessionSelectionViewController.swift in Sources */,
+				C0AD4FE32A8A741E00904E98 /* CenemaTableViewCell.swift in Sources */,
+				C0FD7C662A8BC9EE00075B24 /* MovieDatetimeCollectionViewCell.swift in Sources */,
+				C0E5BB312A8CA0DE00B1C41A /* SeatCollectionViewCell.swift in Sources */,
 				C09CD20B2A84A1A900C58757 /* AppDelegate.swift in Sources */,
 				C09CD20D2A84A1A900C58757 /* SceneDelegate.swift in Sources */,
+				C0AD4FE02A8A72EE00904E98 /* SeatSelectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
