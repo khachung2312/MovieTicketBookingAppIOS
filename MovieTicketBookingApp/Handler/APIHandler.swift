@@ -30,7 +30,6 @@ class APIHandler{
             switch response.result {
             case .success(let welcome):
                 completion(welcome)
-                print("Successed")
             case .failure(let error):
                 print("Errorrrrrrrrrrrrrrr: \(error)")
             }

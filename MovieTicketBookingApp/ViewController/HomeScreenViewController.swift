@@ -25,14 +25,13 @@ class HomeScreenViewController: UIViewController, UICollectionViewDataSource, UI
     var voucher: [Voucher] = []
     
     typealias LocationCompletion = (CLLocation) -> ()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
         callAPIMovies()
         callAPIVouchers()
-        
-        
     }
     
     func configCollectionView() {
@@ -69,17 +68,17 @@ class HomeScreenViewController: UIViewController, UICollectionViewDataSource, UI
     func callAPIMovies() {
         APIHandler().getMovies { welcome in
             self.moviesForView = welcome.data
-            print(print("getMovie + \(welcome.data)"))
             self.moviesForComingSoon = welcome.data
+            
             self.collectionMovieView.reloadData()
             self.collectionMovieComingSoon.reloadData()
+        
         }
     }
     
     func callAPIVouchers(){
         APIHandler().getVouchers { voucherWelcome in
             self.voucher = voucherWelcome.data
-            print("voucherWelcome + \(voucherWelcome)")
             self.collectionVoucher.reloadData()
         }
     }
@@ -103,30 +102,27 @@ class HomeScreenViewController: UIViewController, UICollectionViewDataSource, UI
             let movie = moviesForView[indexPath.row]
             if let cell = cell as? MovieCategoryCollectionViewCell {
                 cell.movieName.text = movie.title
-                print("\(movie.title)")
                 let url = URL(string: movie.thumbnail)
                 cell.moviePoster.kf.setImage(with: url)
                 cell.starRating(rating: movie.rating)
             }
-            
-        } else if collectionView == collectionMovieComingSoon {
+        }
+         else if collectionView == collectionMovieComingSoon {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCSCollectionViewCell", for: indexPath) as! MovieCSCollectionViewCell
             let movie = moviesForComingSoon[indexPath.row]
             if let cell = cell as? MovieCSCollectionViewCell {
                 let url = URL(string: movie.thumbnail)
                 cell.movieComingSoonPoster.kf.setImage(with: url)
             }
-            
-        } else if collectionView == collectionVoucher {
+        }
+        else if collectionView == collectionVoucher {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VoucherCollectionViewCell", for: indexPath) as! VoucherCollectionViewCell
             let voucher = voucher[indexPath.row]
             if let cell = cell as? VoucherCollectionViewCell {
                 cell.titleVoucher.text = voucher.content
                 cell.titleVoucher.numberOfLines = 5
-                print(voucher.content)
                 let url = URL(string: voucher.thumbnail)
                 cell.imgVoucher.kf.setImage(with: url)
-                print(voucher.thumbnail)
             }
         }
         else {
