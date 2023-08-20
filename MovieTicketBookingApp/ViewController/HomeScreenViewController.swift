@@ -8,6 +8,7 @@
 import UIKit
 import CollectionViewPagingLayout
 import Kingfisher
+import CoreLocation
 
 class HomeScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
     
@@ -23,43 +24,15 @@ class HomeScreenViewController: UIViewController, UICollectionViewDataSource, UI
     var moviesForComingSoon: [Movie] = []
     var voucher: [Voucher] = []
     
+    typealias LocationCompletion = (CLLocation) -> ()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configCollectionView()
         callAPIMovies()
         callAPIVouchers()
-    }
-    
-    func starsImageNames(for rating: Double) -> [String] {
-        let maxRating: Double = 5.0
-        let fullStarImageName = "fullStar"
-        let halfStarImageName = "halfStar"
-        let emptyStarImageName = "emptyStar"
         
-        let numberOfFullStars = Int(rating)
-        var numberOfHalfStars = 0
         
-        if rating > Double(numberOfFullStars) {
-            numberOfHalfStars = 1
-        }
-        
-        let numberOfEmptyStars = Int(maxRating) - numberOfFullStars - numberOfHalfStars
-        
-        var starImageNames: [String] = []
-        
-        for _ in 0..<numberOfFullStars {
-            starImageNames.append(fullStarImageName)
-        }
-        
-        if numberOfHalfStars > 0 {
-            starImageNames.append(halfStarImageName)
-        }
-        
-        for _ in 0..<numberOfEmptyStars {
-            starImageNames.append(emptyStarImageName)
-        }
-        
-        return starImageNames
     }
     
     func configCollectionView() {
@@ -133,12 +106,7 @@ class HomeScreenViewController: UIViewController, UICollectionViewDataSource, UI
                 print("\(movie.title)")
                 let url = URL(string: movie.thumbnail)
                 cell.moviePoster.kf.setImage(with: url)
-                let starImageNames = starsImageNames(for: movie.rating)
-                for i in 0..<5 {
-                    let imageView = UIImageView(image: UIImage(named: starImageNames[i]))
-                    imageView.frame = CGRect(x: CGFloat(i) * 20, y: (cell.movieName.frame.height - 5), width: 20, height: 20) // Điều chỉnh vị trí và kích thước của từng ảnh
-                    cell.contentView.addSubview(imageView)
-                }
+                cell.starRating(rating: movie.rating)
             }
             
         } else if collectionView == collectionMovieComingSoon {
@@ -174,7 +142,7 @@ extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
         if collectionView == collectionMovieView {
             // Chỉnh kích thước cho collectionMovieView
             let cellWidth: CGFloat = 180
-            let cellHeight: CGFloat = 350
+            let cellHeight: CGFloat = 400
             return CGSize(width: cellWidth, height: cellHeight)
         } else if collectionView == collectionVoucher {
             // Chỉnh kích thước cho collectionVoucher
