@@ -9,11 +9,11 @@ import UIKit
 
 class MovieCSCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var movieComingSoonPoster: UIImageView!
+    @IBOutlet var movieComingSoonPoster: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
 }
+

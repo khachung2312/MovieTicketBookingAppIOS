@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VoucherCollectionViewCell" id="gTV-IL-0wX" customClass="VoucherCollectionViewCell" customModule="MovieTicketBookingApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="297" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="297" height="180"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eO8-zu-8gW">
+                        <rect key="frame" x="0.0" y="0.0" width="297" height="180"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bKz-EZ-HGY">
+                                <rect key="frame" x="23" y="47" width="108" height="87"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vb5-Ig-J0p">
+                                <rect key="frame" x="169" y="47" width="109" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="YYN-hm-IPD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.44705882352941173" green="0.41568627450980389" blue="0.70588235294117641" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Vb5-Ig-J0p" secondAttribute="trailing" constant="19" id="LhO-aF-Hoe"/>
+                            <constraint firstItem="Vb5-Ig-J0p" firstAttribute="top" secondItem="bKz-EZ-HGY" secondAttribute="top" id="XYd-lN-gMV"/>
+                            <constraint firstItem="bKz-EZ-HGY" firstAttribute="leading" secondItem="eO8-zu-8gW" secondAttribute="leading" constant="23" id="aMZ-sj-yvz"/>
+                            <constraint firstItem="Vb5-Ig-J0p" firstAttribute="leading" secondItem="bKz-EZ-HGY" secondAttribute="trailing" constant="38" id="bAn-H0-NHk"/>
+                            <constraint firstItem="Vb5-Ig-J0p" firstAttribute="leading" secondItem="bKz-EZ-HGY" secondAttribute="trailing" constant="38" id="dn9-yH-mQV"/>
+                            <constraint firstAttribute="bottom" secondItem="bKz-EZ-HGY" secondAttribute="bottom" constant="46" id="fYI-Vr-dZh"/>
+                            <constraint firstItem="Vb5-Ig-J0p" firstAttribute="bottom" secondItem="bKz-EZ-HGY" secondAttribute="bottom" id="nAd-cn-n30"/>
+                            <constraint firstItem="bKz-EZ-HGY" firstAttribute="top" secondItem="eO8-zu-8gW" secondAttribute="top" constant="47" id="sEq-66-dFM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eO8-zu-8gW" secondAttribute="trailing" id="HQH-Z3-zuD"/>
+                <constraint firstItem="eO8-zu-8gW" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XnO-ho-iPy"/>
+                <constraint firstAttribute="bottom" secondItem="eO8-zu-8gW" secondAttribute="bottom" id="lvJ-pR-kHd"/>
+                <constraint firstItem="eO8-zu-8gW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sgs-hb-7B9"/>
+            </constraints>
+            <size key="customSize" width="297" height="180"/>
+            <connections>
+                <outlet property="imgVoucher" destination="bKz-EZ-HGY" id="kTJ-89-HFx"/>
+                <outlet property="titleVoucher" destination="Vb5-Ig-J0p" id="FuO-Cv-x08"/>
+                <outlet property="viewVoucher" destination="eO8-zu-8gW" id="kkn-PX-IqJ"/>
+            </connections>
+            <point key="canvasLocation" x="234.35114503816794" y="65.492957746478879"/>
+        </collectionViewCell>
+    </objects>
+</document>

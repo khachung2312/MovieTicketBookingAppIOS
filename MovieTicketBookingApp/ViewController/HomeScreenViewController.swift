@@ -6,13 +6,118 @@
 //
 
 import UIKit
+import CollectionViewPagingLayout
+import Kingfisher
 
 class HomeScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+    
+    
+    @IBOutlet weak var ButtonView: UIView!
+    @IBOutlet weak var collectionVoucher: UICollectionView!
+    @IBOutlet weak var movieCategory: UILabel!
+    @IBOutlet weak var ScrollView: UIScrollView!
+    @IBOutlet weak var collectionMovieComingSoon: UICollectionView!
+    @IBOutlet weak var collectionMovieView: UICollectionView!
+    
+    var moviesForView: [Movie] = []
+    var moviesForComingSoon: [Movie] = []
+    var voucher: [Voucher] = []
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configCollectionView()
+        callAPIMovies()
+        callAPIVouchers()
+    }
+    
+    func starsImageNames(for rating: Double) -> [String] {
+        let maxRating: Double = 5.0
+        let fullStarImageName = "fullStar"
+        let halfStarImageName = "halfStar"
+        let emptyStarImageName = "emptyStar"
+        
+        let numberOfFullStars = Int(rating)
+        var numberOfHalfStars = 0
+        
+        if rating > Double(numberOfFullStars) {
+            numberOfHalfStars = 1
+        }
+        
+        let numberOfEmptyStars = Int(maxRating) - numberOfFullStars - numberOfHalfStars
+        
+        var starImageNames: [String] = []
+        
+        for _ in 0..<numberOfFullStars {
+            starImageNames.append(fullStarImageName)
+        }
+        
+        if numberOfHalfStars > 0 {
+            starImageNames.append(halfStarImageName)
+        }
+        
+        for _ in 0..<numberOfEmptyStars {
+            starImageNames.append(emptyStarImageName)
+        }
+        
+        return starImageNames
+    }
+    
+    func configCollectionView() {
+        let layoutCollectionMovieView = UICollectionViewFlowLayout()
+        layoutCollectionMovieView.scrollDirection = .horizontal
+        layoutCollectionMovieView.sectionInset = UIEdgeInsets.zero
+        collectionMovieView.collectionViewLayout = layoutCollectionMovieView
+        collectionMovieView.isPagingEnabled = true
+        collectionMovieView.showsHorizontalScrollIndicator = false
+        collectionMovieView.dataSource = self
+        collectionMovieView.delegate = self
+        collectionMovieView.register(UINib(nibName: "MovieCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCategoryCollectionViewCell")
+        
+        let comingSoonLayout = CollectionViewPagingLayout()
+        comingSoonLayout.scrollDirection = .horizontal
+        collectionMovieComingSoon.collectionViewLayout = comingSoonLayout
+        collectionMovieComingSoon.isPagingEnabled = true
+        collectionMovieComingSoon.showsHorizontalScrollIndicator = false
+        collectionMovieComingSoon.dataSource = self
+        collectionMovieComingSoon.delegate = self
+        collectionMovieComingSoon.register(UINib(nibName: "MovieCSCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCSCollectionViewCell")
+        
+        let layoutCollectionVoucher = UICollectionViewFlowLayout()
+        layoutCollectionVoucher.scrollDirection = .horizontal
+        layoutCollectionVoucher.sectionInset = UIEdgeInsets.zero
+        collectionVoucher.collectionViewLayout = layoutCollectionVoucher
+        collectionVoucher.isPagingEnabled = true
+        collectionVoucher.showsHorizontalScrollIndicator = false
+        collectionVoucher.dataSource = self
+        collectionVoucher.delegate = self
+        collectionVoucher.register(UINib(nibName: "VoucherCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "VoucherCollectionViewCell")
+    }
+    
+    func callAPIMovies() {
+        APIHandler().getMovies { welcome in
+            self.moviesForView = welcome.data
+            print(print("getMovie + \(welcome.data)"))
+            self.moviesForComingSoon = welcome.data
+            self.collectionMovieView.reloadData()
+            self.collectionMovieComingSoon.reloadData()
+        }
+    }
+    
+    func callAPIVouchers(){
+        APIHandler().getVouchers { voucherWelcome in
+            self.voucher = voucherWelcome.data
+            print("voucherWelcome + \(voucherWelcome)")
+            self.collectionVoucher.reloadData()
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == collectionMovieView {
             return moviesForView.count
         } else if collectionView == collectionMovieComingSoon {
             return moviesForComingSoon.count
+        } else if collectionView == collectionVoucher {
+            return voucher.count
         }
         return 0
     }
@@ -24,125 +129,61 @@ class HomeScreenViewController: UIViewController, UICollectionViewDataSource, UI
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCategoryCollectionViewCell", for: indexPath) as! MovieCategoryCollectionViewCell
             let movie = moviesForView[indexPath.row]
             if let cell = cell as? MovieCategoryCollectionViewCell {
-                cell.movieName.text = movie.movieName
-                if let image = UIImage(named: "\(movie.moviePoster)") {
-                    cell.moviePoster.image = image
+                cell.movieName.text = movie.title
+                print("\(movie.title)")
+                let url = URL(string: movie.thumbnail)
+                cell.moviePoster.kf.setImage(with: url)
+                let starImageNames = starsImageNames(for: movie.rating)
+                for i in 0..<5 {
+                    let imageView = UIImageView(image: UIImage(named: starImageNames[i]))
+                    imageView.frame = CGRect(x: CGFloat(i) * 20, y: (cell.movieName.frame.height - 5), width: 20, height: 20) // Điều chỉnh vị trí và kích thước của từng ảnh
+                    cell.contentView.addSubview(imageView)
                 }
             }
+            
         } else if collectionView == collectionMovieComingSoon {
             cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCSCollectionViewCell", for: indexPath) as! MovieCSCollectionViewCell
             let movie = moviesForComingSoon[indexPath.row]
             if let cell = cell as? MovieCSCollectionViewCell {
-                if let image = UIImage(named: movie.moviePoster) {
-                    cell.movieComingSoonPoster.image = image
-                }
+                let url = URL(string: movie.thumbnail)
+                cell.movieComingSoonPoster.kf.setImage(with: url)
             }
-        } else {
+            
+        } else if collectionView == collectionVoucher {
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VoucherCollectionViewCell", for: indexPath) as! VoucherCollectionViewCell
+            let voucher = voucher[indexPath.row]
+            if let cell = cell as? VoucherCollectionViewCell {
+                cell.titleVoucher.text = voucher.content
+                cell.titleVoucher.numberOfLines = 5
+                print(voucher.content)
+                let url = URL(string: voucher.thumbnail)
+                cell.imgVoucher.kf.setImage(with: url)
+                print(voucher.thumbnail)
+            }
+        }
+        else {
             cell = UICollectionViewCell()
         }
-        
         return cell
     }
     
-    
-    
-    @IBOutlet weak var collectionMovieComingSoon: UICollectionView!
-    @IBOutlet weak var collectionMovieView: UICollectionView!
-    
-    @IBOutlet weak var movieCSSegment: UISegmentedControl!
-    
-    var moviesForView: [MoviesModel]!
-    var moviesForComingSoon: [MoviesModel]!
-    
-    //var movies: MoviesTypealias = []
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configCollectionView()
-        loadMovieData()
-    }
-    
-    
-    func configCollectionView() {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets.zero
-        
-        collectionMovieView.collectionViewLayout = layout
-        collectionMovieView.dataSource = self
-        collectionMovieView.delegate = self
-        collectionMovieView.register(UINib(nibName: "MovieCategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCategoryCollectionViewCell")
-        
-        let comingSoonLayout = UICollectionViewFlowLayout()
-        comingSoonLayout.scrollDirection = .horizontal
-        comingSoonLayout.sectionInset = UIEdgeInsets.zero
-        
-        collectionMovieComingSoon.collectionViewLayout = comingSoonLayout
-        collectionMovieComingSoon.dataSource = self
-        collectionMovieComingSoon.delegate = self
-        collectionMovieComingSoon.register(UINib(nibName: "MovieCSCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MovieCSCollectionViewCell")
-        
-        movieCSSegment.addTarget(self, action: #selector(segmentedControlValueChanged), for: .valueChanged)
-    }
-    
-    func loadMovieData() {
-        moviesForView = [
-            MoviesModel(movieID: "1", movieName: "Star Wars: The Last", moviePoster: "poster1", categoryID: "1", time: "2h 30m", rating: 4),
-            MoviesModel(movieID: "2", movieName: "Fast & Furious 9", moviePoster: "poster2", categoryID: "2", time: "2h 15m", rating: 3),
-            MoviesModel(movieID: "3", movieName: "Star Wars: The Last", moviePoster: "poster1", categoryID: "1", time: "2h 30m", rating: 4),
-            MoviesModel(movieID: "4", movieName: "Fast & Furious 9", moviePoster: "poster2", categoryID: "1", time: "2h 30m", rating: 4),
-        ]
-        
-        moviesForComingSoon = [
-            MoviesModel(movieID: "7", movieName: "The Conjuring 3", moviePoster: "poster1", categoryID: "3", time: "2h", rating: 4),
-            MoviesModel(movieID: "8", movieName: "Movie 4", moviePoster: "poster2", categoryID: "3", time: "2h", rating: 4),
-            MoviesModel(movieID: "9", movieName: "Movie 4", moviePoster: "poster2", categoryID: "3", time: "2h", rating: 4)
-        ]
-        
-        collectionMovieView.reloadData()
-        collectionMovieComingSoon.reloadData()
-    }
-    
-    @objc func segmentedControlValueChanged(sender: UISegmentedControl) {
-        // Update the data source for collectionMovieView based on the selected segment
-        if sender.selectedSegmentIndex == 0 {
-            // Load data for the first segment
-            moviesForComingSoon = [
-                MoviesModel(movieID: "11", movieName: "Star Wars: The Last", moviePoster: "poster1", categoryID: "1", time: "2h 30m", rating: 4),
-            ]
-        } else if sender.selectedSegmentIndex == 1 {
-            // Load data for the second segment
-            moviesForComingSoon = [
-                MoviesModel(movieID: "12", movieName: "The Conjuring 3", moviePoster: "poster2", categoryID: "3", time: "2h", rating: 4),
-            ]
-        } else if sender.selectedSegmentIndex == 2 {
-            // Load data for the second segment
-            moviesForComingSoon = [
-                MoviesModel(movieID: "13", movieName: "The Conjuring 3", moviePoster: "poster1", categoryID: "3", time: "2h", rating: 4),
-            ]
-            
-            collectionMovieComingSoon.reloadData()
-        }
-    }
 }
 
 extension HomeScreenViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let collectionViewWidth = collectionView.bounds.width
-        let collectionViewHeight = collectionView.bounds.height
-        
-        if collectionView == collectionMovieComingSoon {
-            let centerPosterWidth = collectionViewWidth * 0.6 // Kích thước của poster chính
-            let sidePosterWidth = collectionViewWidth * 0.2 // Kích thước của poster bên cạnh
-            let posterHeight = collectionViewHeight
-            
-            if indexPath.item == 1 {
-                return CGSize(width: centerPosterWidth, height: posterHeight)
-            } else {
-                return CGSize(width: sidePosterWidth, height: posterHeight)
-            }
-        } else {
-            return CGSize(width: 200, height: 150)
+        if collectionView == collectionMovieView {
+            // Chỉnh kích thước cho collectionMovieView
+            let cellWidth: CGFloat = 180
+            let cellHeight: CGFloat = 350
+            return CGSize(width: cellWidth, height: cellHeight)
+        } else if collectionView == collectionVoucher {
+            // Chỉnh kích thước cho collectionVoucher
+            let cellWidth: CGFloat = 250
+            let cellHeight: CGFloat = 150
+            return CGSize(width: cellWidth, height: cellHeight)
         }
+        
+        return CGSize(width: 0, height: 0) // Giá trị mặc định, bạn có thể điều chỉnh tùy theo yêu cầu
     }
 }
+

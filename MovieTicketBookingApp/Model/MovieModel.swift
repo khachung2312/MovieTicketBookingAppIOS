@@ -7,32 +7,52 @@
 
 import Foundation
 
-struct MoviesModel: Codable {
-    var movieID: String
-    var movieName: String
-    var moviePoster: String
-    var categoryID: String
-    var time: String
-    var rating: Int
+// MARK: - Welcome
+struct Welcome: Codable {
+    let message: String
+    let isSuccess: Bool
+    let data: [Movie]
     
-    init(movieID: String, movieName: String, moviePoster: String, categoryID: String, time: String, rating: Int) {
-        self.movieID = movieID
-        self.movieName = movieName
-        self.moviePoster = moviePoster
-        self.categoryID = categoryID
-        self.time = time
-        self.rating = rating
+    enum CodingKeys: String, CodingKey {
+        case message
+        case isSuccess
+        case data
     }
-    
-    enum CodingKeys: String, CodingKey{
-        case movieID = "movieID"
-        case movieName = "movieName"
-        case moviePoster = "moviePoster"
-        case categoryID = "categoryID"
-        case time = "time"
-        case rating = "rating"
-    }
-    
 }
 
-typealias MoviesTypealias = [MoviesModel]
+
+// MARK: - Movie
+struct Movie: Codable {
+    let id: Int
+    let title: String
+    let year: Int
+    let categories: [Category]
+    let thumbnail: String
+    let rating: Double
+    let duaration: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case year
+        case categories
+        case thumbnail
+        case rating
+        case duaration
+    }
+}
+
+
+// MARK: - Category
+struct Category: Codable {
+    let id: Int
+    let name: String
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+    }
+}
+
+typealias MovieTypelias = [Movie]
+typealias CategoryTypelias = [Category]

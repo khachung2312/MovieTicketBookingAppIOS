@@ -16,6 +16,10 @@
 		C09CD2222A84A1AA00C58757 /* MovieTicketBookingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD2212A84A1AA00C58757 /* MovieTicketBookingAppTests.swift */; };
 		C09CD22C2A84A1AA00C58757 /* MovieTicketBookingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD22B2A84A1AA00C58757 /* MovieTicketBookingAppUITests.swift */; };
 		C09CD22E2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD22D2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift */; };
+		D338518A2A8FFAD200A1F671 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = D33851892A8FFAD200A1F671 /* Kingfisher */; };
+		D338518D2A901D8400A1F671 /* VoucherCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338518B2A901D8400A1F671 /* VoucherCollectionViewCell.swift */; };
+		D338518E2A901D8400A1F671 /* VoucherCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D338518C2A901D8400A1F671 /* VoucherCollectionViewCell.xib */; };
+		D33851902A9021F400A1F671 /* VoucherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D338518F2A9021F400A1F671 /* VoucherModel.swift */; };
 		D3BEA1262A859754008EE563 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEA1252A859754008EE563 /* HomeScreenViewController.swift */; };
 		D3BEA12B2A8598E3008EE563 /* HomeScreenStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3BEA12A2A8598E3008EE563 /* HomeScreenStoryboard.storyboard */; };
 		D3BEA1342A85CC41008EE563 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEA1332A85CC41008EE563 /* MovieModel.swift */; };
@@ -23,6 +27,9 @@
 		D3BEA15C2A882C42008EE563 /* MovieCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BEA15A2A882C42008EE563 /* MovieCategoryCollectionViewCell.xib */; };
 		D3BEA15F2A89CBFE008EE563 /* MovieCSCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEA15D2A89CBFE008EE563 /* MovieCSCollectionViewCell.swift */; };
 		D3BEA1602A89CBFE008EE563 /* MovieCSCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3BEA15E2A89CBFE008EE563 /* MovieCSCollectionViewCell.xib */; };
+		D3BEA1652A8D3126008EE563 /* CollectionViewPagingLayout in Frameworks */ = {isa = PBXBuildFile; productRef = D3BEA1642A8D3126008EE563 /* CollectionViewPagingLayout */; };
+		D3BEA1AB2A8F8CF8008EE563 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3BEA1AA2A8F8CF8008EE563 /* APIHandler.swift */; };
+		D3BEA1AE2A8F8D14008EE563 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D3BEA1AD2A8F8D14008EE563 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +63,9 @@
 		C09CD2272A84A1AA00C58757 /* MovieTicketBookingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieTicketBookingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09CD22B2A84A1AA00C58757 /* MovieTicketBookingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTicketBookingAppUITests.swift; sourceTree = "<group>"; };
 		C09CD22D2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTicketBookingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D338518B2A901D8400A1F671 /* VoucherCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherCollectionViewCell.swift; sourceTree = "<group>"; };
+		D338518C2A901D8400A1F671 /* VoucherCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VoucherCollectionViewCell.xib; sourceTree = "<group>"; };
+		D338518F2A9021F400A1F671 /* VoucherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoucherModel.swift; sourceTree = "<group>"; };
 		D3BEA1252A859754008EE563 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		D3BEA12A2A8598E3008EE563 /* HomeScreenStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeScreenStoryboard.storyboard; sourceTree = "<group>"; };
 		D3BEA1332A85CC41008EE563 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
@@ -63,6 +73,7 @@
 		D3BEA15A2A882C42008EE563 /* MovieCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		D3BEA15D2A89CBFE008EE563 /* MovieCSCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCSCollectionViewCell.swift; sourceTree = "<group>"; };
 		D3BEA15E2A89CBFE008EE563 /* MovieCSCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCSCollectionViewCell.xib; sourceTree = "<group>"; };
+		D3BEA1AA2A8F8CF8008EE563 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +81,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D338518A2A8FFAD200A1F671 /* Kingfisher in Frameworks */,
+				D3BEA1652A8D3126008EE563 /* CollectionViewPagingLayout in Frameworks */,
+				D3BEA1AE2A8F8D14008EE563 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,6 +127,7 @@
 		C09CD2092A84A1A900C58757 /* MovieTicketBookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				D3BEA1A92A8F8CD9008EE563 /* Handler */,
 				D3BEA13D2A85D90A008EE563 /* ViewCells */,
 				D3BEA1322A85CC2E008EE563 /* Model */,
 				D3BEA1292A859836008EE563 /* Views */,
@@ -165,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				D3BEA1332A85CC41008EE563 /* MovieModel.swift */,
+				D338518F2A9021F400A1F671 /* VoucherModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,8 +200,18 @@
 				D3BEA15A2A882C42008EE563 /* MovieCategoryCollectionViewCell.xib */,
 				D3BEA15D2A89CBFE008EE563 /* MovieCSCollectionViewCell.swift */,
 				D3BEA15E2A89CBFE008EE563 /* MovieCSCollectionViewCell.xib */,
+				D338518B2A901D8400A1F671 /* VoucherCollectionViewCell.swift */,
+				D338518C2A901D8400A1F671 /* VoucherCollectionViewCell.xib */,
 			);
 			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		D3BEA1A92A8F8CD9008EE563 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				D3BEA1AA2A8F8CF8008EE563 /* APIHandler.swift */,
+			);
+			path = Handler;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +230,11 @@
 			dependencies = (
 			);
 			name = MovieTicketBookingApp;
+			packageProductDependencies = (
+				D3BEA1642A8D3126008EE563 /* CollectionViewPagingLayout */,
+				D3BEA1AD2A8F8D14008EE563 /* Alamofire */,
+				D33851892A8FFAD200A1F671 /* Kingfisher */,
+			);
 			productName = MovieTicketBookingApp;
 			productReference = C09CD2072A84A1A900C58757 /* MovieTicketBookingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -276,6 +307,11 @@
 				Base,
 			);
 			mainGroup = C09CD1FE2A84A1A900C58757;
+			packageReferences = (
+				D3BEA1632A8D3126008EE563 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */,
+				D3BEA1AC2A8F8D14008EE563 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				D33851882A8FFAD200A1F671 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = C09CD2082A84A1A900C58757 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -294,6 +330,7 @@
 			files = (
 				D3BEA12B2A8598E3008EE563 /* HomeScreenStoryboard.storyboard in Resources */,
 				C09CD2172A84A1A900C58757 /* LaunchScreen.storyboard in Resources */,
+				D338518E2A901D8400A1F671 /* VoucherCollectionViewCell.xib in Resources */,
 				C09CD2142A84A1A900C58757 /* Assets.xcassets in Resources */,
 				D3BEA15C2A882C42008EE563 /* MovieCategoryCollectionViewCell.xib in Resources */,
 				C09CD2122A84A1A900C58757 /* Main.storyboard in Resources */,
@@ -322,9 +359,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D33851902A9021F400A1F671 /* VoucherModel.swift in Sources */,
 				D3BEA15B2A882C42008EE563 /* MovieCategoryCollectionViewCell.swift in Sources */,
 				D3BEA1342A85CC41008EE563 /* MovieModel.swift in Sources */,
 				C09CD20F2A84A1A900C58757 /* ViewController.swift in Sources */,
+				D3BEA1AB2A8F8CF8008EE563 /* APIHandler.swift in Sources */,
+				D338518D2A901D8400A1F671 /* VoucherCollectionViewCell.swift in Sources */,
 				D3BEA1262A859754008EE563 /* HomeScreenViewController.swift in Sources */,
 				C09CD20B2A84A1A900C58757 /* AppDelegate.swift in Sources */,
 				D3BEA15F2A89CBFE008EE563 /* MovieCSCollectionViewCell.swift in Sources */,
@@ -668,6 +708,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D33851882A8FFAD200A1F671 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		D3BEA1632A8D3126008EE563 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/amirdew/CollectionViewPagingLayout.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		D3BEA1AC2A8F8D14008EE563 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D33851892A8FFAD200A1F671 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D33851882A8FFAD200A1F671 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		D3BEA1642A8D3126008EE563 /* CollectionViewPagingLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3BEA1632A8D3126008EE563 /* XCRemoteSwiftPackageReference "CollectionViewPagingLayout" */;
+			productName = CollectionViewPagingLayout;
+		};
+		D3BEA1AD2A8F8D14008EE563 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D3BEA1AC2A8F8D14008EE563 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C09CD1FF2A84A1A900C58757 /* Project object */;
 }
