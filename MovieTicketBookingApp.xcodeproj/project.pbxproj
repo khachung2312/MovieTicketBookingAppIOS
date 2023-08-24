@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D0736462A867048008469A0 /* MovieDetailsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D0736452A867048008469A0 /* MovieDetailsStoryboard.storyboard */; };
+		7D0736482A869D17008469A0 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0736472A869D17008469A0 /* MovieDetailsViewController.swift */; };
+		7D0736582A8D347C008469A0 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D0736572A8D347C008469A0 /* APIHandler.swift */; };
+		7D07365B2A8D349B008469A0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 7D07365A2A8D349B008469A0 /* Alamofire */; };
+		7D07366A2A8D5A64008469A0 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 7D0736692A8D5A64008469A0 /* Kingfisher */; };
+		7D07366C2A8E5D94008469A0 /* MoviesResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D07366B2A8E5D94008469A0 /* MoviesResponseModel.swift */; };
+		7D0736AC2A923C07008469A0 /* OpenSans_Condensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D0736AB2A923C07008469A0 /* OpenSans_Condensed-Bold.ttf */; };
+		7D0736AE2A923C12008469A0 /* OpenSans_Condensed-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D0736AD2A923C12008469A0 /* OpenSans_Condensed-Medium.ttf */; };
+		7D0736B12A923C1F008469A0 /* OpenSans_Condensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D0736AF2A923C1F008469A0 /* OpenSans_Condensed-Regular.ttf */; };
+		7D0736B22A923C1F008469A0 /* OpenSans_Condensed-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D0736B02A923C1F008469A0 /* OpenSans_Condensed-SemiBold.ttf */; };
+		7D0736B42A923C36008469A0 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D0736B32A923C36008469A0 /* OpenSans-Bold.ttf */; };
+		7D0736B62A923C42008469A0 /* OpenSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D0736B52A923C42008469A0 /* OpenSans-Medium.ttf */; };
+		7D0736B92A923C4D008469A0 /* OpenSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D0736B72A923C4D008469A0 /* OpenSans-SemiBold.ttf */; };
+		7D0736BA2A923C4D008469A0 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7D0736B82A923C4D008469A0 /* OpenSans-Regular.ttf */; };
 		C09CD20B2A84A1A900C58757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD20A2A84A1A900C58757 /* AppDelegate.swift */; };
 		C09CD20D2A84A1A900C58757 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD20C2A84A1A900C58757 /* SceneDelegate.swift */; };
 		C09CD20F2A84A1A900C58757 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD20E2A84A1A900C58757 /* ViewController.swift */; };
@@ -36,6 +50,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D0736452A867048008469A0 /* MovieDetailsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MovieDetailsStoryboard.storyboard; sourceTree = "<group>"; };
+		7D0736472A869D17008469A0 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
+		7D0736572A8D347C008469A0 /* APIHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
+		7D07366B2A8E5D94008469A0 /* MoviesResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesResponseModel.swift; sourceTree = "<group>"; };
+		7D0736AB2A923C07008469A0 /* OpenSans_Condensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-Bold.ttf"; sourceTree = "<group>"; };
+		7D0736AD2A923C12008469A0 /* OpenSans_Condensed-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-Medium.ttf"; sourceTree = "<group>"; };
+		7D0736AF2A923C1F008469A0 /* OpenSans_Condensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-Regular.ttf"; sourceTree = "<group>"; };
+		7D0736B02A923C1F008469A0 /* OpenSans_Condensed-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans_Condensed-SemiBold.ttf"; sourceTree = "<group>"; };
+		7D0736B32A923C36008469A0 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		7D0736B52A923C42008469A0 /* OpenSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Medium.ttf"; sourceTree = "<group>"; };
+		7D0736B72A923C4D008469A0 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		7D0736B82A923C4D008469A0 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		C09CD2072A84A1A900C58757 /* MovieTicketBookingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieTicketBookingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09CD20A2A84A1A900C58757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C09CD20C2A84A1A900C58757 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +82,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D07366A2A8D5A64008469A0 /* Kingfisher in Frameworks */,
+				7D07365B2A8D349B008469A0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +104,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D0736AA2A923B94008469A0 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				7D0736AB2A923C07008469A0 /* OpenSans_Condensed-Bold.ttf */,
+				7D0736AD2A923C12008469A0 /* OpenSans_Condensed-Medium.ttf */,
+				7D0736AF2A923C1F008469A0 /* OpenSans_Condensed-Regular.ttf */,
+				7D0736B82A923C4D008469A0 /* OpenSans-Regular.ttf */,
+				7D0736B72A923C4D008469A0 /* OpenSans-SemiBold.ttf */,
+				7D0736B02A923C1F008469A0 /* OpenSans_Condensed-SemiBold.ttf */,
+				7D0736B32A923C36008469A0 /* OpenSans-Bold.ttf */,
+				7D0736B52A923C42008469A0 /* OpenSans-Medium.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		C09CD1FE2A84A1A900C58757 = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +142,7 @@
 		C09CD2092A84A1A900C58757 /* MovieTicketBookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				7D0736AA2A923B94008469A0 /* Font */,
 				C09CD20A2A84A1A900C58757 /* AppDelegate.swift */,
 				C09CD20C2A84A1A900C58757 /* SceneDelegate.swift */,
 				C09CD20E2A84A1A900C58757 /* ViewController.swift */,
@@ -106,6 +150,10 @@
 				C09CD2132A84A1A900C58757 /* Assets.xcassets */,
 				C09CD2152A84A1A900C58757 /* LaunchScreen.storyboard */,
 				C09CD2182A84A1A900C58757 /* Info.plist */,
+				7D0736452A867048008469A0 /* MovieDetailsStoryboard.storyboard */,
+				7D0736472A869D17008469A0 /* MovieDetailsViewController.swift */,
+				7D0736572A8D347C008469A0 /* APIHandler.swift */,
+				7D07366B2A8E5D94008469A0 /* MoviesResponseModel.swift */,
 			);
 			path = MovieTicketBookingApp;
 			sourceTree = "<group>";
@@ -143,6 +191,10 @@
 			dependencies = (
 			);
 			name = MovieTicketBookingApp;
+			packageProductDependencies = (
+				7D07365A2A8D349B008469A0 /* Alamofire */,
+				7D0736692A8D5A64008469A0 /* Kingfisher */,
+			);
 			productName = MovieTicketBookingApp;
 			productReference = C09CD2072A84A1A900C58757 /* MovieTicketBookingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +267,12 @@
 				Base,
 			);
 			mainGroup = C09CD1FE2A84A1A900C58757;
+			packageReferences = (
+				7D0736592A8D349B008469A0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				7D0736682A8D5A64008469A0 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				7D0736A82A921F9F008469A0 /* XCRemoteSwiftPackageReference "Swift-YouTube-Player" */,
+				7D0736A92A9220E7008469A0 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */,
+			);
 			productRefGroup = C09CD2082A84A1A900C58757 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -231,8 +289,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0736B22A923C1F008469A0 /* OpenSans_Condensed-SemiBold.ttf in Resources */,
 				C09CD2172A84A1A900C58757 /* LaunchScreen.storyboard in Resources */,
+				7D0736B92A923C4D008469A0 /* OpenSans-SemiBold.ttf in Resources */,
+				7D0736B12A923C1F008469A0 /* OpenSans_Condensed-Regular.ttf in Resources */,
+				7D0736462A867048008469A0 /* MovieDetailsStoryboard.storyboard in Resources */,
+				7D0736AC2A923C07008469A0 /* OpenSans_Condensed-Bold.ttf in Resources */,
+				7D0736B42A923C36008469A0 /* OpenSans-Bold.ttf in Resources */,
 				C09CD2142A84A1A900C58757 /* Assets.xcassets in Resources */,
+				7D0736AE2A923C12008469A0 /* OpenSans_Condensed-Medium.ttf in Resources */,
+				7D0736B62A923C42008469A0 /* OpenSans-Medium.ttf in Resources */,
+				7D0736BA2A923C4D008469A0 /* OpenSans-Regular.ttf in Resources */,
 				C09CD2122A84A1A900C58757 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,9 +325,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D0736482A869D17008469A0 /* MovieDetailsViewController.swift in Sources */,
 				C09CD20F2A84A1A900C58757 /* ViewController.swift in Sources */,
+				7D0736582A8D347C008469A0 /* APIHandler.swift in Sources */,
 				C09CD20B2A84A1A900C58757 /* AppDelegate.swift in Sources */,
 				C09CD20D2A84A1A900C58757 /* SceneDelegate.swift in Sources */,
+				7D07366C2A8E5D94008469A0 /* MoviesResponseModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +511,7 @@
 				INFOPLIST_FILE = MovieTicketBookingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MovieDetailsStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +538,7 @@
 				INFOPLIST_FILE = MovieTicketBookingApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = MovieDetailsStoryboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -596,6 +666,54 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7D0736592A8D349B008469A0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		7D0736682A8D5A64008469A0 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		7D0736A82A921F9F008469A0 /* XCRemoteSwiftPackageReference "Swift-YouTube-Player" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gilesvangruisen/Swift-YouTube-Player.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+		7D0736A92A9220E7008469A0 /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/0xced/XCDYouTubeKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7D07365A2A8D349B008469A0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D0736592A8D349B008469A0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		7D0736692A8D5A64008469A0 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7D0736682A8D5A64008469A0 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C09CD1FF2A84A1A900C58757 /* Project object */;
 }
