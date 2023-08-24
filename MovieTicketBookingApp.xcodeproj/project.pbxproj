@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C06E2D6F2A963023008B4D03 /* TicketModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06E2D6E2A963023008B4D03 /* TicketModel.swift */; };
+		C07ABFA32A90524200407B24 /* MovieTheaterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07ABFA22A90524200407B24 /* MovieTheaterModel.swift */; };
+		C07ABFA52A9054C300407B24 /* APIHandlers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07ABFA42A9054C300407B24 /* APIHandlers.swift */; };
+		C07ABFA82A9054D400407B24 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C07ABFA72A9054D400407B24 /* Alamofire */; };
+		C07ABFAB2A9054E000407B24 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C07ABFAA2A9054E000407B24 /* Kingfisher */; };
+		C07ABFAD2A91C6F700407B24 /* SeatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07ABFAC2A91C6F700407B24 /* SeatModel.swift */; };
 		C09CD20B2A84A1A900C58757 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD20A2A84A1A900C58757 /* AppDelegate.swift */; };
 		C09CD20D2A84A1A900C58757 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD20C2A84A1A900C58757 /* SceneDelegate.swift */; };
 		C09CD20F2A84A1A900C58757 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09CD20E2A84A1A900C58757 /* ViewController.swift */; };
@@ -47,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C06E2D6E2A963023008B4D03 /* TicketModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketModel.swift; sourceTree = "<group>"; };
+		C07ABFA22A90524200407B24 /* MovieTheaterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTheaterModel.swift; sourceTree = "<group>"; };
+		C07ABFA42A9054C300407B24 /* APIHandlers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIHandlers.swift; sourceTree = "<group>"; };
+		C07ABFAC2A91C6F700407B24 /* SeatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatModel.swift; sourceTree = "<group>"; };
 		C09CD2072A84A1A900C58757 /* MovieTicketBookingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieTicketBookingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C09CD20A2A84A1A900C58757 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C09CD20C2A84A1A900C58757 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,7 +71,7 @@
 		C09CD22B2A84A1AA00C58757 /* MovieTicketBookingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTicketBookingAppUITests.swift; sourceTree = "<group>"; };
 		C09CD22D2A84A1AA00C58757 /* MovieTicketBookingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTicketBookingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C0AD4FDB2A8A721600904E98 /* BookTicketsStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = BookTicketsStoryBoard.storyboard; sourceTree = "<group>"; };
-		C0AD4FDD2A8A72A300904E98 /* MovieSessionSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSessionSelectionViewController.swift; sourceTree = "<group>"; };
+		C0AD4FDD2A8A72A300904E98 /* MovieSessionSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSessionSelectionViewController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		C0AD4FDF2A8A72EE00904E98 /* SeatSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeatSelectionViewController.swift; sourceTree = "<group>"; };
 		C0AD4FE12A8A741E00904E98 /* CenemaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenemaTableViewCell.swift; sourceTree = "<group>"; };
 		C0AD4FE22A8A741E00904E98 /* CenemaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CenemaTableViewCell.xib; sourceTree = "<group>"; };
@@ -78,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07ABFAB2A9054E000407B24 /* Kingfisher in Frameworks */,
+				C07ABFA82A9054D400407B24 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +110,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C07ABFA12A90512D00407B24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C07ABFA22A90524200407B24 /* MovieTheaterModel.swift */,
+				C07ABFAC2A91C6F700407B24 /* SeatModel.swift */,
+				C06E2D6E2A963023008B4D03 /* TicketModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		C09CD1FE2A84A1A900C58757 = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +143,7 @@
 		C09CD2092A84A1A900C58757 /* MovieTicketBookingApp */ = {
 			isa = PBXGroup;
 			children = (
+				C07ABFA12A90512D00407B24 /* Models */,
 				C0AD4FDA2A8A71D000904E98 /* Handler */,
 				C0AD4FD52A8A713A00904E98 /* Views */,
 				C0AD4FD42A8A711A00904E98 /* Controllers */,
@@ -188,6 +211,7 @@
 		C0AD4FDA2A8A71D000904E98 /* Handler */ = {
 			isa = PBXGroup;
 			children = (
+				C07ABFA42A9054C300407B24 /* APIHandlers.swift */,
 			);
 			path = Handler;
 			sourceTree = "<group>";
@@ -208,6 +232,10 @@
 			dependencies = (
 			);
 			name = MovieTicketBookingApp;
+			packageProductDependencies = (
+				C07ABFA72A9054D400407B24 /* Alamofire */,
+				C07ABFAA2A9054E000407B24 /* Kingfisher */,
+			);
 			productName = MovieTicketBookingApp;
 			productReference = C09CD2072A84A1A900C58757 /* MovieTicketBookingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -280,6 +308,10 @@
 				Base,
 			);
 			mainGroup = C09CD1FE2A84A1A900C58757;
+			packageReferences = (
+				C07ABFA62A9054D400407B24 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C07ABFA92A9054E000407B24 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = C09CD2082A84A1A900C58757 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -328,6 +360,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C07ABFAD2A91C6F700407B24 /* SeatModel.swift in Sources */,
 				C0FD7C622A8BC00000075B24 /* MovieShowtimeCollectionViewCell.swift in Sources */,
 				C09CD20F2A84A1A900C58757 /* ViewController.swift in Sources */,
 				C0AD4FDE2A8A72A300904E98 /* MovieSessionSelectionViewController.swift in Sources */,
@@ -335,8 +368,11 @@
 				C0FD7C662A8BC9EE00075B24 /* MovieDatetimeCollectionViewCell.swift in Sources */,
 				C0E5BB312A8CA0DE00B1C41A /* SeatCollectionViewCell.swift in Sources */,
 				C09CD20B2A84A1A900C58757 /* AppDelegate.swift in Sources */,
+				C06E2D6F2A963023008B4D03 /* TicketModel.swift in Sources */,
 				C09CD20D2A84A1A900C58757 /* SceneDelegate.swift in Sources */,
+				C07ABFA32A90524200407B24 /* MovieTheaterModel.swift in Sources */,
 				C0AD4FE02A8A72EE00904E98 /* SeatSelectionViewController.swift in Sources */,
+				C07ABFA52A9054C300407B24 /* APIHandlers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +708,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C07ABFA62A9054D400407B24 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		C07ABFA92A9054E000407B24 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C07ABFA72A9054D400407B24 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C07ABFA62A9054D400407B24 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		C07ABFAA2A9054E000407B24 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C07ABFA92A9054E000407B24 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C09CD1FF2A84A1A900C58757 /* Project object */;
 }
