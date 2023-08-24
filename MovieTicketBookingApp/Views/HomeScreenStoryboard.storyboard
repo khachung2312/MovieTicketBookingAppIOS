@@ -199,6 +199,7 @@
                         <outlet property="collectionMovieComingSoon" destination="jyh-xV-f8X" id="JzL-ZG-HIF"/>
                         <outlet property="collectionMovieView" destination="9kZ-4R-Bj7" id="vAw-bC-aM5"/>
                         <outlet property="collectionVoucher" destination="tJw-rb-fuQ" id="ufl-TG-H46"/>
+                        <outlet property="lblGetLocation" destination="iFf-UZ-w1l" id="vwc-fL-RXc"/>
                         <outlet property="movieCategory" destination="opo-bu-mcX" id="JVO-tn-BqH"/>
                     </connections>
                 </viewController>

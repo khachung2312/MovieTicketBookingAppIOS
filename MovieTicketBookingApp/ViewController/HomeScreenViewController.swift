@@ -10,8 +10,11 @@ import CollectionViewPagingLayout
 import Kingfisher
 import CoreLocation
 
-class HomeScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate{
+class HomeScreenViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, CLLocationManagerDelegate {
     
+    
+    @IBOutlet weak var lblGetLocation: UILabel!
+    var manager: CLLocationManager = CLLocationManager()
     
     @IBOutlet weak var ButtonView: UIView!
     @IBOutlet weak var collectionVoucher: UICollectionView!
@@ -32,6 +35,24 @@ class HomeScreenViewController: UIViewController, UICollectionViewDataSource, UI
         configCollectionView()
         callAPIMovies()
         callAPIVouchers()
+        
+        lblGetLocation.text = "Ready!"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestWhenInUseAuthorization()
+        manager.startUpdatingLocation()
+    
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let first = locations.first else {
+            return
+        }
+        lblGetLocation.text = "\(first.coordinate.longitude) | \(first.coordinate.latitude)"
     }
     
     func configCollectionView() {
